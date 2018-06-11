@@ -13,7 +13,11 @@ const app = express();
 app.use(i18n.init);
 
 app.use(express.static(__dirname + '/public'));
-app.use(bodyParser());
+app.use(bodyParser.urlencoded({
+    extended: true
+}));
+
+app.use(bodyParser.json());
 
 
 app.use(i18n.init);
@@ -21,8 +25,8 @@ app.use(i18n.init);
 //  Database connection
 require('./database');
 
-app.use('/', require('./routes/locales'));
+app.use('/', require('./routes/main'));
 
 app.listen(3000, () => {
-    console.log('Server run on port 3000')
+    console.log('Server run on port 3000');
 });

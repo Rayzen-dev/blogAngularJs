@@ -1,10 +1,8 @@
 const express = require('express'),
-    app = express();
+    app = express.Router();
 
-app.use('/:lang', (req, res) => {
-    console.log(req.params.lang);
-    //  if ${lang} is in locales array, setLocale = $[{lang}
-});
+
+app.use('/blog', require('./main'));
 
 /*
 //This code is executed
