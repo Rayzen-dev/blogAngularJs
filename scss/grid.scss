@@ -1,0 +1,13 @@
+.container {
+  width: 70%;
+  margin: 0 auto;
+  padding: 1em 0;
+}
+
+.row {
+  @include flex();
+}
+
+@each $modifier, $breakpoint in $map-grid-col {
+  @include create-col-classes($modifier, $column, $breakpoint);
+}

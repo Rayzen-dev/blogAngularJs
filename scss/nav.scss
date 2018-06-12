@@ -1,0 +1,43 @@
+nav {
+  background: #000;
+  .menu {
+    @include flex();
+    justify-content: space-between;
+    width: 70%;
+    margin: 0 auto;
+    select {
+      text-transform: uppercase;
+    }
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    @include flex();
+    width: 80%;
+    li {
+      @include transition(.2s);
+      &:hover {
+        @include boxShadow(0, -3px, 0, #83D1D8, inset);
+      }
+    }
+    a {
+      display: block;
+      padding: 1em;
+      color: #07A3B2;
+      font-weight: bold;
+      @include transition(.2s);
+      &:hover {
+        text-decoration: none;
+        -webkit-transform: rotate(-5deg);
+        -moz-transform: rotate(-5deg);
+        -ms-transform: rotate(-5deg);
+        -o-transform: rotate(-5deg);
+        transform: rotate(-5deg);
+
+      }
+    }
+  }
+
+
+}

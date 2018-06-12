@@ -1,0 +1,11 @@
+<nav ng-controller="navController">
+    <div class="menu">
+        <ul>
+            <li><a href="/<%- getLocale %>"><%- trad.index %></a></li>
+            <li><a href="/<%- getLocale %>/about"><%- trad.about %></a></li>
+        </ul>
+        <select>
+            <% allLocales.forEach(locale => { %><option <%if (locale === getLocale) { %>selected="" <%} %>value="<%- locale %>"><%- locale %></option> <% });%>
+        </select>
+    </div>
+</nav>

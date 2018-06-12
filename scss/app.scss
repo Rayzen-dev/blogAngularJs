@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:600');
+@import url('https://fonts.googleapis.com/css?family=Dosis');
+
+//  Include all functions and variables
+@import "variables";
+@import "function";
+
+//  Reset css
+@import "reset";
+
+body {
+  background: aliceblue;
+  font-family: 'Dosis', sans-serif;
+}
+
+//  Grid component
+@import "grid";
+
+//  Nav component
+@import "nav";
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: 'Poppins', serif;
+}

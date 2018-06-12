@@ -1,0 +1,14 @@
+// Grid parameters
+$column: 12;
+
+$bp_lg: 1024;
+$bp_md: 768;
+$bp_sm: 600;
+$bp_xs: 280;
+
+$map-grid-col : (
+        '-xs' : $bp_xs,
+        '-sm' : $bp_sm,
+        '-md' : $bp_md,
+        '-lg' : $bp_lg,
+);

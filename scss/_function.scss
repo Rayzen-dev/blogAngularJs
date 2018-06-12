@@ -1,0 +1,45 @@
+@mixin flex() {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  width: 100%;
+}
+
+@mixin transition($t, $elem:all) {
+  -webkit-transition: $t $elem;
+  -moz-transition: $t $elem;
+  -ms-transition: $t $elem;
+  -o-transition: $t $elem;
+  transition: $t $elem;
+}
+
+@mixin boxShadow($x, $y, $blur, $color, $inset:"") {
+  -webkit-box-shadow: unquote($inset) $x $y $blur $color;
+  -moz-box-shadow: unquote($inset) $x $y $blur $color;
+  box-shadow: unquote($inset) $x $y $blur $color;
+}
+
+@mixin create-mq($breakpoint) {
+  @if($breakpoint == 0) {
+    @content;
+  } @else {
+    @media all and (min-width: $breakpoint * 1px) {
+      @content
+    }
+  }
+}
+
+@mixin create-col-classes($modifier, $nb_col, $breakpoint) {
+  @include create-mq($breakpoint) {
+    @for $i from 1 through $nb_col {
+      .col#{$modifier}-#{$i} {
+        width: (100 / ($nb_col / $i) ) * 1%;
+      }
+      .col#{$modifier}-offset-#{$i} {
+        margin-left: (100 / ($nb_col / $i) ) * 1%;
+      }
+    }
+  }
+}

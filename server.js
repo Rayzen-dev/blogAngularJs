@@ -19,8 +19,8 @@ app.use(bodyParser.urlencoded({
 
 app.use(bodyParser.json());
 
-
-app.use(i18n.init);
+//  View engine
+app.set('view engine', 'ejs');
 
 //  Database connection
 require('./database');
