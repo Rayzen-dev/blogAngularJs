@@ -22,3 +22,23 @@ body {
 h1,h2,h3,h4,h5,h6 {
   font-family: 'Poppins', serif;
 }
+
+.sideMenu {
+  border-right: 1px solid #07A3B2;
+  padding: 1em .75em;
+}
+
+.contentArticle {
+  padding: 1.5em 2em;
+  font-size: 1.4rem;
+}
+
+footer {
+  p {
+    margin: 0;
+    padding: .5em 0;
+  }
+  font-size: .75em;
+  text-align: center;
+  background: darkgrey;
+}

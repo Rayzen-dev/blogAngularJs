@@ -13,9 +13,15 @@ app.use('/:lang', (req, res, next) => {
     }
 });
 
-app.get('/:lang', (req, res) => {
-    res.send(req.params.lang);
+app.get('/', (req, res) => {
+    let headers = req.headers["accept-language"].split(',')[0];
+
+    res.redirect(headers + '/blog');
 });
+
+app.use('/api');
+
+app.use('/admin', require('./admin'));
 
 app.use('/:lang/blog', require('./blog'));
 
