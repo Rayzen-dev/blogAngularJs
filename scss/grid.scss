@@ -17,3 +17,7 @@
 @each $modifier, $breakpoint in $map-grid-col {
   @include create-col-classes($modifier, $column, $breakpoint);
 }
+
+[class^="col-"] {
+  padding: 0 1em;
+}

@@ -1,5 +1,9 @@
 {
 	"index": "Home",
 	"title": "Hello",
-	"about": "About"
+	"about": "About",
+	"register": "register",
+	"register.title": "register.title",
+	"register.username": "register.username",
+	"register.password": "register.password"
 }

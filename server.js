@@ -23,7 +23,7 @@ app.use(bodyParser.json());
 app.set('view engine', 'ejs');
 
 //  Database connection
-require('./database');
+//require('./database');
 
 app.use('/', require('./routes/main'));
 

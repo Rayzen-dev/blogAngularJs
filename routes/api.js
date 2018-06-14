@@ -1,10 +1,20 @@
 const express = require('express'),
     router = express.Router();
 
-router.use('/', (req, res, next) => {
-    if (req.xhr || req.headers.accept.indexOf('json')) {
+router.use((req, res, next) => {
+    if (req.xhr) {
         next();
     } else {
-        res.status(403);
+        res.status(403).send(req.headers);
     }
 });
+
+router.get('/', (req, res) => {
+    res.send('lol');
+});
+
+router.get('/api', (req, res) => {
+    res.send('lol');
+});
+
+module.exports = router;

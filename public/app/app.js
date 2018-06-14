@@ -1,1 +1,1 @@
-const app = angular.module('blog', []);
+const app = angular.module('blog', ['UserService']);

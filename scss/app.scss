@@ -33,6 +33,12 @@ h1,h2,h3,h4,h5,h6 {
   font-size: 1.4rem;
 }
 
+//  Import forms
+@import "form";
+
+//  Import typo
+@import "typo";
+
 footer {
   p {
     margin: 0;

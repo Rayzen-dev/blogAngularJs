@@ -1,5 +1,18 @@
 {
-    "index": "Accueil",
+	"index": "Accueil",
 	"title": "La gazette du développeur",
-    "about": "A propos"
+	"about": "A propos",
+	"register.title": "Inscription",
+	"register.username": "Pseudo",
+	"register.username.text": "Du texte pour expliquer les pseudos",
+	"register.mail": "Adresse mail",
+	"register.password": "Mot de passe",
+	"register.repassword": "Confirmation mot de passe",
+	"register.loginLink": "Déjà inscris? Connectez-vous!",
+	"form.submit": "Enregistrer",
+	"form.cancel": "Annuler",
+	"register.mail.text": "Du texte pour l'email",
+	"register.password.text": "Encore du texte pour le mot de passe",
+	"register.repassword.text": "Retappez votre mot de passe juste pour être sûr...",
+	"register.username.available": "Disponibilité du pseudo"
 }

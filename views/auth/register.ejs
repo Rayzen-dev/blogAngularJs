@@ -1,0 +1,45 @@
+<% include ../layouts/header %>
+
+<div class="container">
+    <h1><%- trad.register %></h1>
+    <form class="form row" ng-controller="registerController" ng-submit="register($event, register)" method="post">
+        <div class="col-lg-8">
+            <div class="form-group">
+                <label for="username"><%= __('register.username') %>:</label>
+                <input type="text" id="username" class="form-control" ng-model="register.username" ng-blur="usernameContent=false" ng-focus="usernameContent=true" ng-keyup="checkUsername(register.username)" />
+            </div>
+
+            <div class="form-group">
+                <label for="email"><%= __('register.mail') %>:</label>
+                <input type="text" id="email" class="form-control" ng-model="register.email" ng-blur="mailContent=false" ng-focus="mailContent=true" />
+            </div>
+
+            <div class="form-group">
+                <label for="password"><%= __('register.password') %>:</label>
+                <input type="password" id="password" class="form-control" ng-model="register.password" ng-focus="passwordContent=true" ng-blur="passwordContent=false" />
+            </div>
+
+            <div class="form-group">
+                <label for="repassword"><%= __('register.repassword') %>:</label>
+                <input type="password" id="repassword" class="form-control" ng-model="register.repassword" ng-focus="repasswordContent=true" ng-blur="repasswordContent=false" />
+            </div>
+
+            <div class="text-center">
+                <a href="#"><%= __('register.loginLink') %></a>&emsp;<input type="submit" value="<%= __('form.submit') %>" />
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <p ng-show="usernameContent">
+                <%= __('register.username.text') %><br />
+                <span ng-class="{'text-success': availableUsername, 'text-danger': !availableUsername && register.username.length > 0}"><%= __('register.username.available') %><img ng-show="ajaxProcess" src="/img/ajax.gif" /></span>
+            </p>
+            <p ng-show="mailContent"><%= __('register.mail.text') %></p>
+            <p ng-show="passwordContent"><%= __('register.password.text') %></p>
+            <p ng-show="repasswordContent"><%= __('register.repassword.text') %></p>
+        </div>
+    </form>
+</div>
+
+<script src="/app/_controllers/registerController.js"></script>
+<script src="/app/_services/user.service.js"></script>
+<% include ../layouts/footer %>

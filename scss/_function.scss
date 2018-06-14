@@ -22,6 +22,15 @@
   box-shadow: unquote($inset) $x $y $blur $color;
 }
 
+@mixin border($px) {
+  -webkit-border-radius: $px;
+  -moz-border-radius: $px;
+  border-radius: $px;
+}
+
+
+//  --------------
+
 @mixin create-mq($breakpoint) {
   @if($breakpoint == 0) {
     @content;

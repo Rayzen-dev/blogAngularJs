@@ -8,7 +8,7 @@ app.get('/', (req, res) => {
         'title': i18n.__('title'),
         'about': i18n.__('about')
     };
-    console.log(i18n.getLocales());
+
     res.render('pages/index', { 'trad': greetings, 'getLocale': i18n.getLocale(), 'allLocales': i18n.getLocales() });
 });
 
