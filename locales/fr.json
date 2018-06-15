@@ -14,5 +14,6 @@
 	"register.mail.text": "Du texte pour l'email",
 	"register.password.text": "Encore du texte pour le mot de passe",
 	"register.repassword.text": "Retappez votre mot de passe juste pour être sûr...",
-	"register.username.available": "Disponibilité du pseudo"
+	"register.username.available": "Disponibilité du pseudo",
+	"register.mail.available": "Disponibilité de l'adresse mail"
 }

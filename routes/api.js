@@ -9,12 +9,6 @@ router.use((req, res, next) => {
     }
 });
 
-router.get('/', (req, res) => {
-    res.send('lol');
-});
-
-router.get('/api', (req, res) => {
-    res.send('lol');
-});
+router.use('/users', require('./api/user'));
 
 module.exports = router;

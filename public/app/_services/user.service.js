@@ -1,4 +1,7 @@
 angular.module('UserService', [])
+    .config(function ($httpProvider) {
+        $httpProvider.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
+    })
     .factory('UserService', function($http, $q) {
 
     var service = {};
@@ -9,6 +12,7 @@ angular.module('UserService', [])
     service.create = Create;
     service.delete = Delete;
     service.update = Update;
+    service.getVerification = getVerifivcation;
 
     return service;
 
@@ -34,6 +38,12 @@ angular.module('UserService', [])
 
     function Update(user) {
         return $http.put('/api/users/'+user.id, user).then(handleSuccess, handleError);
+    }
+
+    function getVerifivcation(filter) {
+        for(let val in filter) {
+            return $http.get('/api/users/verification?'+val+"="+filter[val]).then(handleSuccess, handleError);
+        }
     }
 
     //  Handle errors

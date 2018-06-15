@@ -5,5 +5,15 @@
 	"register": "register",
 	"register.title": "register.title",
 	"register.username": "register.username",
-	"register.password": "register.password"
+	"register.password": "register.password",
+	"register.mail": "register.mail",
+	"register.repassword": "register.repassword",
+	"register.loginLink": "register.loginLink",
+	"form.submit": "form.submit",
+	"register.username.text": "register.username.text",
+	"register.username.available": "register.username.available",
+	"register.mail.text": "register.mail.text",
+	"register.mail.available": "register.mail.available",
+	"register.password.text": "register.password.text",
+	"register.repassword.text": "register.repassword.text"
 }
