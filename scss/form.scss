@@ -1,5 +1,5 @@
 form.form {
-  background: #D8E6E7;
+  background: #E0E3DA;
   margin-bottom: 1.5em;
   border: 1px solid #000;
   padding: 2em;
@@ -21,6 +21,16 @@ form.form {
     @include transition(.2s);
     &:focus {
       @include boxShadow(0, 2px, 5px, rgba(0,0,0,.2));
+    }
+  }
+  input {
+    &.valid {
+      border-color: #8CD790;
+      background: rgba(#D7FFF1, .1);
+    }
+    &.invalid {
+      border-color: #F16B6F;
+      background: rgba(#F16B6F, .1);
     }
   }
 }

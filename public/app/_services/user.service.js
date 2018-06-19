@@ -29,7 +29,7 @@ angular.module('UserService', [])
     }
 
     function Create(user) {
-        return $http.post('/api/users', user).then(handleSuccess, handleError);
+        return $http.post('/api/users', user, {headers: {'Content-Type': 'application/json'}}).then(handleSuccess, handleError);
     }
 
     function Delete(_id) {

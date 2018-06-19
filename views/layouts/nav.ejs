@@ -3,6 +3,7 @@
         <ul>
             <li><a href="/<%- getLocale %>"><%= __('index') %></a></li>
             <li><a href="/<%- getLocale %>/about"><%= __('about') %></a></li>
+            <li><a href="/<%- getLocale %>/register"><%= __('register.title') %></a></li>
         </ul>
         <select>
             <% allLocales.forEach(locale => { %><option <%if (locale === getLocale) { %>selected="" <%} %>value="<%- locale %>"><%- locale %></option> <% });%>

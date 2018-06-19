@@ -1,6 +1,10 @@
 const express = require('express'),
     router = express.Router(),
+    bodyParser = require('body-parser'),
     con = require('../../database');
+
+router.use(bodyParser.json());
+router.use(bodyParser.urlencoded({ extended: false }));
 
 router.get('/verification', (req, res) => {
     if (req.query.mail) {
@@ -11,7 +15,6 @@ router.get('/verification', (req, res) => {
     } else if (req.query.username) {
         con.query('SELECT * FROM `users` WHERE `username`="'+req.query.username+'"', (err, result) => {
             if (err) throw err;
-            console.log(result);
             res.json({exist: Object.keys(result).length, field: 'username'});
         })
     }
@@ -20,6 +23,11 @@ router.get('/verification', (req, res) => {
 
 router.get('/', (req,res) => {
     res.send('/api/users');
+});
+
+router.post('/', (req, res) => {
+    console.log(req.body);
+    res.end();
 });
 
 module.exports = router;

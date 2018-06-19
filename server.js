@@ -22,9 +22,6 @@ app.use(bodyParser.json());
 //  View engine
 app.set('view engine', 'ejs');
 
-//  Database connection
-//require('./database');
-
 app.use('/', require('./routes/main'));
 
 app.listen(3000, () => {

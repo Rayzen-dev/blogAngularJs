@@ -15,5 +15,6 @@
 	"register.password.text": "Encore du texte pour le mot de passe",
 	"register.repassword.text": "Retappez votre mot de passe juste pour être sûr...",
 	"register.username.available": "Disponibilité du pseudo",
-	"register.mail.available": "Disponibilité de l'adresse mail"
+	"register.mail.available": "Disponibilité de l'adresse mail",
+	"register.error.shortPassword": "Mot de passe trop court (min. 6 caractères)"
 }

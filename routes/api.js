@@ -10,5 +10,6 @@ router.use((req, res, next) => {
 });
 
 router.use('/users', require('./api/user'));
+router.use('/translation', require('./api/translation'));
 
 module.exports = router;

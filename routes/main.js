@@ -32,7 +32,6 @@ app.get('/:lang/register', (req, res) => {
     let greetings = {
         register: i18n.__('register.title')
     };
-    console.log(greetings);
     res.render('auth/register', { 'trad': greetings, 'getLocale': i18n.getLocale(), 'allLocales': i18n.getLocales() });
 });
 

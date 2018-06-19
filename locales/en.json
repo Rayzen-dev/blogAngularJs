@@ -15,5 +15,6 @@
 	"register.mail.text": "register.mail.text",
 	"register.mail.available": "register.mail.available",
 	"register.password.text": "register.password.text",
-	"register.repassword.text": "register.repassword.text"
+	"register.repassword.text": "register.repassword.text",
+	"register.error.shortPassword": "Test EN"
 }
